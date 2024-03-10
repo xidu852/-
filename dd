@@ -1,0 +1,21 @@
+import random
+
+def guess_number():
+    target_number = random.randint(1, 100)
+    attempts = 0
+
+    while True:
+        guess = int(input("猜一个数字（1-100）："))
+        attempts += 1
+
+        if guess < target_number:
+            print("太小了！")
+        elif guess > target_number:
+            print("太大了！")
+        else:
+            print(f"恭喜你猜对了！答案是{target_number}。")
+            print(f"你用了{attempts}次猜对。")
+            break
+
+# 执行猜数字游戏
+guess_number()
